@@ -2,7 +2,7 @@
   "name": "robodelice",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/naidurashmita/robodelice",
+  "homepage": "https://github.io/naidurashmita/robodelice",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.10",
     "@testing-library/react": "^11.2.6",
