@@ -1,0 +1,60 @@
+.priceCal {
+    margin-left: 20px;
+    width: 250px;
+    height: fit-content;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    .totalItems {
+        height: 250px;
+        overflow-y: scroll;
+        .toppingName {
+            margin-left: 32px; 
+        }
+        .toppingRate {
+           float: right;
+           margin-right: 32px;
+        }
+    }
+    .checkoutBtnWrapper {
+        background: rgb(239, 245, 251);
+        box-shadow: 0 3px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+        .subTotalCont {
+            margin-bottom: 24px;
+            .finalAmt {
+                float: right;
+                margin-right: 16px;
+                font-weight: bold;
+            }
+            .subTotalText {
+                margin-left: 16px;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width : 375px) {
+    .priceCal {
+        margin-left: 0;
+        width: 90%;
+
+        .checkoutBtnWrapper {
+            box-shadow: none;
+
+            .subTotalCont {
+                margin: 16px 0;
+
+                .subTotalText {
+                    padding-left: 30px;
+                }
+                .finalAmt {
+                    padding-right: 30px;
+                }
+            }
+        }
+
+        .totalItems {
+            background: #64c0ec;
+            height: 100px;
+        }
+    }
+}
