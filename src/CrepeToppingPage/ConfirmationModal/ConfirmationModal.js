@@ -42,7 +42,7 @@ class ConfirmationModal extends Component {
           <div>
             <h3>Thank you for ordering with Us!!!</h3>
             <p>your token number is 1</p>
-            <p>Please pay {totalAmt} and collect your order!</p>
+            <p>Please pay €{totalAmt} and collect your order!</p>
           </div>
           {this.renderRedirect()}
           <div>

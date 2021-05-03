@@ -17,20 +17,14 @@
         cursor: pointer;
         box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
     }
-    .dessetDetails {
-        padding: 32px;
-        .dessertPrize {
-            float: right;
-            font-size: 24px;
-            font-weight: bold;
-            color: black;
-            font-family: auto;
-            margin-right: 64px;
-        }
+    .dessertDetails {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 24px 0;
     }
     .dessertName {
         font-size: 24px;
-        margin-left: 64px;
         font-weight: bold;
         color: black;
         font-family: auto;
@@ -61,8 +55,9 @@
                 }
             }
             
-            .dessetDetails {
+            .dessertDetails {
                 padding: 0;
+                margin: 0;
             }
         }
     }

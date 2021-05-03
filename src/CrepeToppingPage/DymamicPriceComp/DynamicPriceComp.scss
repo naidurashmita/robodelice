@@ -19,10 +19,16 @@
         box-shadow: 0 3px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
         .subTotalCont {
             margin-bottom: 24px;
-            .finalAmt {
-                float: right;
-                margin-right: 16px;
-                font-weight: bold;
+            div {
+                display: inline;
+                ::before {
+                    content: '€';
+                }
+                .finalAmt {
+                    float: right;
+                    margin-right: 16px;
+                    font-weight: bold;
+                }
             }
             .subTotalText {
                 margin-left: 16px;
@@ -53,7 +59,7 @@
         }
 
         .totalItems {
-            background: #64c0ec;
+            background: #fcd02c;
             height: 100px;
         }
     }

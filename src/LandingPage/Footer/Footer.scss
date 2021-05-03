@@ -1,6 +1,20 @@
 .Footer{
-    height: 6rem;
-    position: absolute;
-    background-color: black;
+    background-color: #fcd02c;;
     width: 100%;
+    h4 {
+        color: #000000;
+        margin: 0;
+        font-family: "Ubuntu", Sans-serif;
+        font-size: 60px;
+        font-weight: 900;
+        text-align: center;
+        padding: 2rem 0;
+    }
+    .elementRow {
+        text-align: center;
+        p {
+            color:#7a7a7a;
+            padding-bottom: 1rem;
+        }
+    }
 }

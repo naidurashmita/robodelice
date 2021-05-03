@@ -8,8 +8,8 @@ class MainContent extends Component {
   constructor() {
     super();
     this.state = {
-      crepeBasePrice : 30,
-      waffleBasePrice: 50
+      crepeBasePrice : '2.50',
+      waffleBasePrice: '3.50'
     }
   }
   render() {
@@ -21,16 +21,17 @@ class MainContent extends Component {
             <Link to={{pathname: "/crepeTopping", state: this.state.crepeBasePrice}}>
               <img className="crepe" src={crepe}></img>
             </Link>
-            <div className='dessetDetails'>
+            <div className='dessertDetails'>
               <span className="dessertName">Crepe</span>
-              <span className="dessertPrize">{this.state.crepeBasePrice}</span>
             </div>
           </div>
           <div className='imgDetailWrapper'>
             <Link to="/waffleTopping">
               <img className="waffle" src={waffle}></img>
             </Link>
-            <div className="dessertName">Waffle</div>
+            <div className='dessertDetails'>
+              <div className="dessertName">Waffle</div>
+            </div>
           </div>
         </div>
       </div>

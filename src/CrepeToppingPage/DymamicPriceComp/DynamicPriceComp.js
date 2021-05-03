@@ -45,7 +45,7 @@ class DynamicPrizeComp extends Component {
 
   render(props) {
     const {basePrice, selected} = this.props;
-    let totalAmt = basePrice;
+    let totalAmt = parseFloat(basePrice);
     let toppingData = selected.map((rowData, index)=>{
       totalAmt = totalAmt + parseInt(rowData.children[3].textContent);
       return(
@@ -67,7 +67,9 @@ class DynamicPrizeComp extends Component {
             <div className='checkoutBtnWrapper'>
                 <div className='subTotalCont'>
                   <span className='subTotalText'>Subtotal</span>
-                  <span className='finalAmt'>{totalAmt}</span>
+                  <div>
+                    <span className='finalAmt'>{totalAmt}</span>
+                  </div>
                 </div>
                 <button className='checkoutBtn' onClick={this.openModal}>Checkout</button>
                 <ConfirmationModal isOpen={this.state.isModalOpen} totalAmt = {totalAmt}>

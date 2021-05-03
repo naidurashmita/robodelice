@@ -3,7 +3,7 @@ import './CrepeTopping.scss';
 import strawberry from './strawberries.png';
 import nutella from './nutella.png';
 import vanilla from './vanilla.jpg';
-import MapleSyrup from './MapleSyrup.jpg';
+import whippedCream from './whipped-cream.jpg';
 import honey from './honey.jpg';
 import bananas from './bananas.jpg';
 import Header from '../LandingPage/Header/Header';
@@ -15,12 +15,12 @@ class CrepeTopping extends Component {
         super(props);
         this.state = {
             rows : [
-                    ['Strawberry', {strawberry}.strawberry, 30],
-                    ['Nutella', {nutella}.nutella, 40],
-                    ['Maple Syrup', {MapleSyrup}.MapleSyrup, 20],
-                    ['Vanilla Ice-cream',{vanilla}.vanilla, 25],
-                    ['Sliced Bananas', {bananas}.bananas, 15],
-                    ['Honey', {honey}.honey, 10]
+                    ['Strawberry', {strawberry}.strawberry, '1.00'],
+                    ['Whipped Cream',{whippedCream}.whippedCream, '0.50'],
+                    ['Nutella', {nutella}.nutella, '3.00'],
+                    ['Vanilla Ice-cream',{vanilla}.vanilla, '2.50'],
+                    ['Sliced Bananas', {bananas}.bananas, '1.50'],
+                    ['Honey', {honey}.honey, '3.00']
                 ],
             toppingSelectionChange: false,
             selected: []
@@ -38,17 +38,19 @@ class CrepeTopping extends Component {
                 selected: [...this.state.selected, trEle]
             });
         }
-        console.log("heya", this.state.selected);
     }
 
     render() {
         let rows = this.state.rows.map((row, index)=>{
+            console.log('heya', row[2]);
             return(
               <tr key={index}>
                 <td><input type="checkbox" onChange= {event => this.handleChange(event)}/></td>
                 <td>{row[0]}</td>
                 <td><img className="toppingImages" src={row[1]}></img></td>
-                <td className='toppingPrize'>{row[2]}</td>
+                <td className='toppingPrice'>
+                    <span>{row[2]}</span>
+                </td>
               </tr>
             );
         });
